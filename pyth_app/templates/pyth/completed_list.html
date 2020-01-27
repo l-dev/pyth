@@ -1,0 +1,9 @@
+<h2>Completed Goals</h2>
+
+<ul>
+    {% for completed in completed %}
+    <li>
+        {{ completed.goal}} {{completed.date}}
+    </li>
+    {% endfor %}
+</ul>

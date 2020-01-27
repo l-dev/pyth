@@ -1,0 +1,10 @@
+{% extends 'pyth/base.html' %} {% block content %}
+<h2>Goals <a href="">+</a></h2>
+<ul>
+    {% for schedule in schedule %}
+    
+       <div><a href="{% url 'schedule_detail' pk=schedule.pk %}">{{schedule.goal}}</a></div> 
+   
+    {% endfor %}
+</ul>
+{% endblock %}
