@@ -14,6 +14,16 @@ def schedule_detail(request, pk):
 def completed_detail(request, pk):
     completed = Completed.objects.all()
     return render(request, 'pyth/completed_detail.html', {'completed':completed})
-# def schedule_create(request):
+def schedule_create(request):
+    if request.method == 'POST':
+        form = ScheduleForm(request.POST)
+        if form.is_valid():
+            schedule = form.save()
+            return redirect('schedule_detail', pk=schedule.pk)
+    else:
+            form = ScheduleForm()
+            return render(request, 'pyth/schedule_form.html', {'form': form})
+
+
 
 # Create your views here.

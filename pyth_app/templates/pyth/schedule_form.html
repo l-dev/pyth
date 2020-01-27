@@ -1,0 +1,9 @@
+{% load static %}
+{% extends 'pyth/base.html' %} {% block content %}
+<h1>New Goal</h1>
+<link rel="stylesheet" href="{% static 'css/pyth.css' %}" />
+<form method="POST" class="schedule-form">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}

@@ -1,7 +1,23 @@
 body {
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    
 }
 
 a div {
     text-decoration: white;
+}
+
+.top-header {
+    font-size: 500px;
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 2em;
+}
+.goals {
+    width: 100px;
+    height: 100px;
+    background-color: thistle;
+    border: black dashed 2px;
 }

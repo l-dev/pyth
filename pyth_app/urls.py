@@ -6,5 +6,6 @@ urlpatterns = [
     path('completed/', views.completed_list, name='completed_list'),
     path('schedule/<int:pk>', views.schedule_detail, name='schedule_detail'),
     path('completed/<int:pk>', views.completed_detail, name='completed_detail'),
+    path('schedule/new', views.schedule_create, name='schedule_create'),
 
 ]
