@@ -1,15 +1,15 @@
 body {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    
+
 }
 
 a div {
-    text-decoration: white;
+    text-decoration: blue;
 }
 
 .top-header {
-    font-size: 500px;
+    font-size: 800px;
     font-family: 'Lato', sans-serif;
 }
 h1 {
