@@ -1,5 +1,10 @@
-
-<h2>{{ schedule.goal }}<a href="">(edit)</a></h2>
+{% extends 'pyth/base.html' %} {% block content %}
+<h2>
+  {{ schedule.goal }}<a href="{% url 'schedule_edit' pk=schedule.pk %}"
+    >(edit)</a
+  >
+</h2>
 <h4>goal steps - {{ schedule.stressors }}</h4>
 <img src="{{ schedule.motivators }}" alt="" />
 
+{% endblock %}

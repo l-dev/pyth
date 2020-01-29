@@ -24,6 +24,15 @@ def schedule_create(request):
             form = ScheduleForm()
             return render(request, 'pyth/schedule_form.html', {'form': form})
 
-
+def schedule_edit(request, pk):
+    schedule = Schedule.objects.get(pk=pk)
+    if request.method == "POST":
+        form = ScheduleForm(request.POST, instance=schedule)
+        if form.is_valid():
+            schedule = form.save()
+            return redirect('schedule_detail', pk=schedule.pk)
+    else:
+        form = ScheduleForm(instance=schedule)
+    return render(request, 'pyth/schedule_form.html', {'form': form})
 
 # Create your views here.
